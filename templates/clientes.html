@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Sistema de Clientes</h1>
+
+            <form method="get" class="search-box">
+                <input type="text" name="buscar" placeholder="Buscar cliente"
+                       value="{{ buscar }}">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <a href="/agregar">➕ Agregar cliente</a>
+
+        <br><br>
+
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Plan</th>
+            </tr>
+
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente[0] }}</td>
+                <td>Q {{ cliente[1] }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</body>
+</html>

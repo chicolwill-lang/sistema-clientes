@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Cliente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Agregar Cliente</h1>
+        </div>
+
+        <form method="POST">
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label>Plan</label>
+                <select name="plan" required>
+                    <option value="95">95</option>
+                    <option value="115">115</option>
+                    <option value="145">145</option>
+                    <option value="160">160</option>
+                    <option value="195">195</option>
+                    <option value="215">215</option>
+                    <option value="250">250</option>
+                    <option value="325">325</option>
+                    <option value="400">400</option>
+                </select>
+            </div>
+
+            <button type="submit">Guardar</button>
+            <a href="/" class="btn-secondary">Cancelar</a>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
